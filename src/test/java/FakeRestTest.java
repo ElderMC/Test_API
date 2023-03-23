@@ -34,7 +34,7 @@ public class FakeRestTest {
     }
 
     @Test
-    public void haveToDeleteUserTest() {
+    public void haveToDeleteUser() {
         String id = utils.inserirUsuario("fulano", "fulanoamilton@email.com"
                 , "password", "true");
         //Execução do teste
@@ -42,7 +42,7 @@ public class FakeRestTest {
                .then().statusCode(200).body("message", is("Registro excluído com sucesso"));
         }
     @Test
-    public void userUpdateTest() {
+    public void userUpdate() {
         Map <String,Object> payLoad = new HashMap<String,Object>();
         payLoad.put("nome", "fulano");
         payLoad.put("email", "fulano213@email.com");
